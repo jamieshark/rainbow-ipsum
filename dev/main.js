@@ -141,7 +141,10 @@ var gayz = [
   "PFLAG",
   "marriage equality",
   "dapper",
-  "bowtie"
+  "bowtie",
+  "tacos",
+  "fish",
+  "engaygement"
 ];
 
 var dirty = [
@@ -236,5 +239,4 @@ $(document).on('ready', function() {
     }
 
   });
-
 });
