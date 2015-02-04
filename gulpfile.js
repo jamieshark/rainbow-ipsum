@@ -54,6 +54,8 @@ gulp.task('watch', ['serve'], function() {
   gulp.watch(['index.html'], ['copy-html']);
 });
 
-gulp.task('build', ['clean', 'js', 'copy-html','minify-html']);
+gulp.task('build', ['clean'], function() {
+  gulp.start('js', 'copy-html', 'minify-html');
+});
 
 gulp.task('default', ['serve','watch']);
