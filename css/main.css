@@ -1,0 +1,36 @@
+.header .panel { 
+	border: none; 
+	background-color: #39FF14;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.header .panel h1 { background-color: #000000; padding: 10px; }
+.header .panel h1 , .header .panel p { color: #FFFFFF; display: inline-block; }
+.header .panel p {
+	font-weight: bold;
+	font-size: 40px;
+	letter-spacing: -3px;
+	margin-bottom: 0;
+}
+
+.small { 
+	font-size: 20px !important;
+	letter-spacing: 0px !important;
+}
+
+.main h2 { background-color: #000000; padding: 10px; color: #FFFFFF; letter-spacing: -1px; font-size: 25px; text-align: center; margin: 0;}
+.main .panel { border-style: none; border-width: 0; }
+.main p { font-size: 40px; letter-spacing: -2px; }
+.main label { color: #FFF; }
+.main .select {  
+	text-align: center; 
+	min-height: 200px;
+	color: #FFF;
+	padding: 15px;
+}
+.main .options { margin: 0 0 15px; }
+.werds1 {background-color: #FFAA00; }
+.sentences1 {background-color: #FF007F; }
+.paragraphs1 {background-color: #0080FF; }
+
