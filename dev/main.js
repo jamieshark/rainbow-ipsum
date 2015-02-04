@@ -210,8 +210,26 @@ var makeParagraph = function(numSentence, numWords) {
 };
 
 
-var lezbos = makeParagraph(4);
+$(document).on('ready', function() {
+  var numPars;
+  var numSentence;
+  // this is a little buggy
+  $('#paraNum').bind('input', function() {
+    //check if number
+    numPars = $(this).val() || 5;
 
-var replaceText = function() {
-  document.getElementById('test').innerHTML = lezbos;
-};
+    $('.container').empty();
+
+    for (var i = 0; i < numPars; i++) {
+      $('.container').append("<p>" + makeParagraph(5) + "</p>");
+      console.log("hello");
+    }
+  });
+
+});
+
+// var lezbos = makeParagraph(4);
+
+// var replaceText = function() {
+//   document.getElementById('test').innerHTML = lezbos;
+// };
