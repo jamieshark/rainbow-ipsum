@@ -16,6 +16,11 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('js', function() {
+  gulp.src('node_modules/jquery/dist/jquery.min.js')
+  .pipe(uglify())
+  .pipe(concat('vendor.min.js'))
+  .pipe(gulp.dest('build/js/'));
+
   gulp.src('dev/main.js')
   .pipe(uglify())
   .pipe(concat('main.min.js'))
@@ -54,6 +59,8 @@ gulp.task('watch', ['serve'], function() {
   gulp.watch(['index.html'], ['copy-html']);
 });
 
-gulp.task('build', ['clean', 'js', 'copy-html','minify-html']);
+gulp.task('build', ['clean'], function() {
+  gulp.start('js', 'copy-html', 'minify-html');
+});
 
 gulp.task('default', ['serve','watch']);
