@@ -139,7 +139,9 @@ var gayz = [
   "Trevor Project",
   "GSA",
   "PFLAG",
-  "marriage equality"
+  "marriage equality",
+  "dapper",
+  "bowtie"
 ];
 
 var dirty = [
@@ -196,7 +198,8 @@ var makeSentence = function(numWords) {
 
 var makeParagraph = function(numSentence, numWords) {
   var sentences = [];
-  var sentenceLength = numWords || 10;
+  var maxSentenceLength = numWords || 10;
+  var sentenceLength = randInt(maxSentenceLength);
   for (var i = 0; i < numSentence; i++) {
     sentences.push(makeSentence(sentenceLength));
   }
@@ -207,7 +210,7 @@ var makeParagraph = function(numSentence, numWords) {
 };
 
 
-var lezbos = makeParagraph(3);
+var lezbos = makeParagraph(4);
 
 var replaceText = function() {
   document.getElementById('test').innerHTML = lezbos;
