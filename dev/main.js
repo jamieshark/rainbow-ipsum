@@ -145,7 +145,7 @@ var gayz = [
   "tacos",
   "fish",
   "engaygement",
-  "you're a wanker number 9",
+  "you\'re a wanker number 9",
   "quinoa"
 ];
 
@@ -197,6 +197,7 @@ var makeSentence = function(numWords) {
   }
 
   var string = words.join().replace(/,/g , ' ');
+  console.log(string[0]);
   string = string[0].toUpperCase() + string.slice(1) + punctuation();
   return string;
 };
