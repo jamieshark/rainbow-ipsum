@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     minifyHTML = require('gulp-minify-html'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+    minifyCSS = require('gulp-minify-css'),
     rimraf = require('rimraf');
 
 
@@ -16,7 +17,12 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('js', function() {
-  gulp.src('dev/vendor/*.js')
+  gulp.src(['dev/vendor/jquery.js',
+            'dev/vendor/jquery.cookie.js',
+            'dev/vendor/fastclick.js',
+            'dev/vendor/modernizr.js',
+            'dev/vendor/placeholder.js',
+            'dev/vendor/foundation.min.js'])
   .pipe(uglify())
   .pipe(concat('vendor.min.js'))
   .pipe(gulp.dest('build/js/'));
@@ -26,6 +32,14 @@ gulp.task('js', function() {
   .pipe(concat('main.min.js'))
   .pipe(gulp.dest('build/js/'))
   .pipe(connect.reload());
+});
+
+gulp.task('css', function() {
+  gulp.src('dev/css/*.css')
+    .pipe(concat('style.min.css'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('build/css'));
 });
 
 // Minify and smoosh together HTML
@@ -56,6 +70,7 @@ gulp.task('serve', function() {
 
 gulp.task('watch', ['serve'], function() {
   gulp.watch(['dev/*.js'],['js']);
+  gulp.watch(['dev/*.css'], ['css']);
   gulp.watch(['index.html'], ['copy-html']);
 });
 
