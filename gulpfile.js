@@ -70,7 +70,7 @@ gulp.task('serve', function() {
 
 gulp.task('watch', ['serve'], function() {
   gulp.watch(['dev/*.js'],['js']);
-  gulp.watch(['dev/*.css'], ['css']);
+  gulp.watch(['dev/css/*.css'], ['css']);
   gulp.watch(['index.html'], ['copy-html']);
 });
 
