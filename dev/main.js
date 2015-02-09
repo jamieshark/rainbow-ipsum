@@ -220,13 +220,10 @@ $(document).on('ready', function() {
     event.preventDefault();
 
     var numberGays = $('#numberGays').val();
-    if ( !$.isNumeric( numberGays ) {
-      //error message for validation
-    };
 
     // empty container div
     $('.outcome').empty();
-    console.log($('#selectGay').val());
+
     // append as many paragraphs
     if ($('#selectGay').val() === 'paragraph') {
       for (var i = 0; i < numberGays; i++) {
