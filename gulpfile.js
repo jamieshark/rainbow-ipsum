@@ -75,7 +75,7 @@ gulp.task('watch', ['serve'], function() {
 });
 
 gulp.task('build', ['clean'], function() {
-  gulp.start('js', 'copy-html', 'minify-html');
+  gulp.start('js', 'css', 'copy-html', 'minify-html');
 });
 
 gulp.task('default', ['serve','watch']);
