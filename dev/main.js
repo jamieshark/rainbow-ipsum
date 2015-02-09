@@ -216,28 +216,27 @@ var makeParagraph = function(numSentence, numWords) {
 
 
 $(document).on('ready', function() {
-  console.log('hei');
-  function makeWords(){
+  $('#gay-generator').on('click', function(event) {
+    event.preventDefault();
 
-    if ($('#numberGays').value.match(/[^a-zA-Z0-9\-_\s]/g)) {
-        // replace it with nothing
-        $('#numberGays').value = $('#numberGays').value.replace(/[^a-zA-Z0-9\-_\s]/g, '');
+    var numberGays = $('#numberGays').val();
+    if ( !$.isNumeric( numberGays ) {
+      //error message for validation
     };
 
     // empty container div
     $('.outcome').empty();
-
+    console.log($('#selectGay').val());
     // append as many paragraphs
     if ($('#selectGay').val() === 'paragraph') {
-      for (var i = 0; i < this.value; i++) {
+      for (var i = 0; i < numberGays; i++) {
         $('.outcome').append("<p>" + makeParagraph(5) + "</p>");
       };
     }
     // or words
     else {
-      $('.outcome').append("<p>" + makeSentence(this.value) + "</p>");     
+      $('.outcome').append("<p>" + makeSentence(numberGays) + "</p>");     
     }
-  };
+  });
 
-  console.log(makeWords);
 });
