@@ -216,29 +216,28 @@ var makeParagraph = function(numSentence, numWords) {
 
 
 $(document).on('ready', function() {
+  console.log('hei');
+  function makeWords(){
 
-  // this is a little buggy
-  $('#numberGays').bind('input', function() {
-    //check if number
-
-    if (this.value.match(/[^a-zA-Z0-9\-_\s]/g)) {
+    if ($('#numberGays').value.match(/[^a-zA-Z0-9\-_\s]/g)) {
         // replace it with nothing
-        this.value = this.value.replace(/[^a-zA-Z0-9\-_\s]/g, '');
+        $('#numberGays').value = $('#numberGays').value.replace(/[^a-zA-Z0-9\-_\s]/g, '');
     };
 
     // empty container div
-    $('.container').empty();
+    $('.outcome').empty();
 
     // append as many paragraphs
     if ($('#selectGay').val() === 'paragraph') {
       for (var i = 0; i < this.value; i++) {
-        $('.container').append("<p>" + makeParagraph(5) + "</p>");
+        $('.outcome').append("<p>" + makeParagraph(5) + "</p>");
       };
     }
     // or words
     else {
-      $('.container').append("<p>" + makeSentence(this.value) + "</p>");     
+      $('.outcome').append("<p>" + makeSentence(this.value) + "</p>");     
     }
+  };
 
-  });
+  console.log(makeWords);
 });
