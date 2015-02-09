@@ -144,7 +144,9 @@ var gayz = [
   "bowtie",
   "tacos",
   "fish",
-  "engaygement"
+  "engaygement",
+  "you're a wanker number 9",
+  "quinoa"
 ];
 
 var dirty = [

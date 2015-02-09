@@ -16,7 +16,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('js', function() {
-  gulp.src('node_modules/jquery/dist/jquery.min.js')
+  gulp.src('dev/vendor/*.js')
   .pipe(uglify())
   .pipe(concat('vendor.min.js'))
   .pipe(gulp.dest('build/js/'));
