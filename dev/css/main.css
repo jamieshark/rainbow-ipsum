@@ -7,7 +7,7 @@ body { color: #FFF; }
 }
 
 /* HEADER RULES  */
-.panel { 
+.panel {
 	border: none; 
 	background-color: transparent;
 	text-align: center;
@@ -81,5 +81,11 @@ body { color: #FFF; }
 	height: auto;
 	padding: 20px;
 	margin-bottom: 15px;
+}
+
+#numberGays, #selectGay {
+	font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+	color: #000;
+	font-size: 14px;
 }
 
