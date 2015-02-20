@@ -255,11 +255,11 @@
     var year  = today.getFullYear();
     document.getElementById('copyright').innerHTML = "&copy; " + year;
 
-    var rainbowIpsum = new gayGenerator();
 
     $('#gay-generator').on('click', function(event) {
       event.preventDefault();
       var numberGays = $('#numberGays').val();
+      var rainbowIpsum = new gayGenerator();
 
       if ($('#nsfw').is(':checked')) {
         rainbowIpsum.makeItDirty();
