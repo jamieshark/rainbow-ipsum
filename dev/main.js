@@ -168,6 +168,12 @@
       return Math.floor((Math.random() * num) + 1);
     },
 
+    // set config nsfw to true
+    makeItDirty: function() {
+      var self  = this;
+      self.nsfw = true;
+    },
+
     // processing stuff here lulz
     processing: function() {
       function eliminateDuplicates(arr) {
@@ -188,9 +194,12 @@
 
     // have yourself some punctuation
     punctuation: function() {
-      var characters = ['.','!','?'];
-      console.log(this);
-      var x = this.randInt(characters.length);
+      var self = this;
+      // extra array entry to offset randInt
+      // also known as struck by the lazies.
+      var characters = ['.', '.', '!','?'];
+
+      var x = self.randInt(characters.length - 1);
       return characters[x];
     },
 
@@ -200,6 +209,10 @@
           self  = this;
 
       var gayz  = self.gayz;
+
+      if (self.nsfw === true) {
+        gayz = gayz.concat(self.dirty);
+      }
 
       for (var i = 0; i < numWords; i++) {
         words.push(gayz[self.randInt(gayz.length)]);
@@ -248,6 +261,9 @@
       event.preventDefault();
       var numberGays = $('#numberGays').val();
 
+      if ($('#nsfw').is(':checked')) {
+        rainbowIpsum.makeItDirty();
+      }
       // empty container div
       $('.outcome').empty();
 
