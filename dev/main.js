@@ -148,7 +148,40 @@
       "fish",
       "engaygement",
       "you\'re a wanker number 9",
-      "quinoa"
+      "quinoa",
+      "Carmilla",
+      "Laura Hollis",
+      "Elise Bauman",
+      "Carmilla Karnstein",
+      "Natasha Negovanlis",
+      "Lola Perry",
+      "S\. LaFontaine",
+      "Danny Lawrence",
+      "Buffy",
+      "Willow",
+      "Tara",
+      "South of Nowhere",
+      "Faking It",
+      "Amy Raudenfeld",
+      "Karma Ashcroft",
+      "Karma and Amy",
+      "Amy and Reagan",
+      "Emily and Naomi",
+      "Naomily",
+      "lezbros",
+      "West Hollywood",
+      "WeHo",
+      "The Abbey",
+      "Truckstop",
+      "The L Word",
+      "The Real L Word",
+      "Jeanie",
+      "Whitney and Sara",
+      "meow",
+      "cats",
+      "cat",
+      "kitten",
+      "Blue is the Warmest Color"
     ],
     this.dirty = [
       "fisting",
@@ -248,7 +281,15 @@
     // ooo pretty rainbows
     var randomColors = ['#FF0036','#FFAA00','#dfdf04','#BCE400','#0080FF','#FF007F','#7A00E5','#FF00FF']
     var r = Math.floor((Math.random()*randomColors.length));
-    $('body').css('background-color', randomColors[r]);
+    $('.header').css('background-color', randomColors[r]);
+
+    var randomColors = ['#FF0036','#FFAA00','#dfdf04','#BCE400','#0080FF','#FF007F','#7A00E5','#FF00FF']
+    var r = Math.floor((Math.random()*randomColors.length));
+    $('.outcome').css('background-color', randomColors[r]);
+
+    var randomColors = ['#FF0036','#FFAA00','#dfdf04','#BCE400','#0080FF','#FF007F','#7A00E5','#FF00FF']
+    var r = Math.floor((Math.random()*randomColors.length));
+    $('.heart').css('color', randomColors[r]);
 
     // copyright
     var today = new Date();

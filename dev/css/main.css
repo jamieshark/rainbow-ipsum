@@ -5,12 +5,10 @@ body { color: #FFF; }
 	font-size: 20px !important;
 	letter-spacing: 0px !important;
 }
-
 /* HEADER RULES  */
 .panel {
 	border: none; 
 	background-color: transparent;
-	text-align: center;
 	margin-bottom: 0; 
 	padding: 0;
 }
@@ -18,15 +16,16 @@ body { color: #FFF; }
 	background-color: #000000; 
 	padding: 10px; 
 	margin-bottom: 0;
+	font-size: 35px;
 }
-.header .panel h1 , .header .panel p { 
+.header .panel h1 , .header .panel p, .main h2 { 
 	color: #FFFFFF;  	
 	display: inline-block;
+	font-weight: 700;
+	letter-spacing: -2px;
 }
 .header .panel p {
-	font-weight: bold;
 	font-size: 40px;
-	letter-spacing: -2px;
 	margin-bottom: 0;
 }
 
@@ -34,58 +33,97 @@ body { color: #FFF; }
 .main h2 { 
 	background-color: #000000; 
 	padding: 10px; 
-	color: #FFFFFF; 
 	letter-spacing: -1px; 
 	font-size: 25px; 
-	text-align: center; 
 	margin: 0;
 	margin-bottom: 15px;
 }
 .button { 
-	border: solid 2px #FFF;
-	background-color: transparent; 
-	margin-bottom: 1.25rem;
+	border: solid 4px #FFF;
+	background-color: transparent;
 	width: 100%;
+	display: block;
+	margin: 0 auto;
 }
 .button:hover, .button:focus, .button:focus {
     background-color: #939393; 
 }
-
-@media only screen and (min-width: 857px) {
-	.main form { 
-		text-align: center;
-	}
-	.main form p { 
-		display: inline;
-	}
-	#numberGays { 
-	 	width: 15%;
-		display: inline-block;  	
-	}
-	#selectGay { 
-		width: 50%;
-	 }
-	#numberGays, #selectGay {
-		margin: 0 15px;
-	}
-	.button { 
-		width: 156px; 
-		margin-bottom: 0;
-	}
-}
-
-/* OUTCOME RULES  */
-.outcome { 
-	border: solid 2px #FFF; 
-	width: 100%;
-	height: auto;
-	padding: 20px;
-	margin-bottom: 15px;
-}
+.main .row { padding-top: 0; margin: 0;}
+.main p {display: inline; color: #707070;}
 
 #numberGays, #selectGay {
 	font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 	color: #000;
 	font-size: 14px;
+	background-color: #FFF;
 }
+
+/* OUTCOME RULES  */
+
+.outcome { 
+	border: solid 2px #FFF; 
+	width: 100%;
+	height: auto;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer { 
+	text-align: center;
+	margin: 10px 0;
+	color: #707070;
+	
+}
+
+footer p { 
+	font-size: 11px;
+	margin: 0;
+}
+
+/* MEDIA QUEERIES */
+
+@media only screen and (min-width: 857px) {
+	.main {
+		text-align: center;
+	}
+	#numberGays { 
+	 	width: 74%;
+		display: inline-block;  	
+	}
+	#selectGay { 
+		width: 81%;
+	}
+	#numberGays, #selectGay {
+		margin-left: 10px;
+	}
+	.outcome {
+		padding: 30px;
+	}
+	.button { 
+		width: 250px; 
+		margin-bottom: 0;
+	}
+}
+
+
+/* ALTERNATIVE CSS */
+body { color: #000; }
+.row { padding: 0 0 20px; }
+.header { padding: 50px !important; }
+.main { padding: 0; }
+.main h2 { display: block !important; }
+.outcome p { color: white; }
+.button { 
+	border: none;
+	background-color: #000;
+	font-weight: 700; 
+}
+.button:hover, .button:focus, .button:focus {
+    background-color: #939393; 
+}
+
+
+
+
 
