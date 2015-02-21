@@ -110,9 +110,10 @@ footer p {
 /* ALTERNATIVE CSS */
 body { color: #000; }
 .row { padding: 0 0 20px; }
-.header { padding: 50px !important; }
+.header { padding: 25px !important; }
 .main { padding: 0; }
 .main h2 { display: block !important; }
+.outcome { margin-bottom: 0; }
 .outcome p { color: white; }
 .button { 
 	border: none;
