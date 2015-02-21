@@ -99,6 +99,7 @@ footer p {
 	}
 	.outcome {
 		padding: 30px;
+		display: none;
 	}
 	.button { 
 		width: 250px; 

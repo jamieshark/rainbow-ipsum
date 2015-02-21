@@ -311,13 +311,13 @@
       // append as many paragraphs
       if ($('#selectGay').val() === 'paragraph') {
         for (var i = 0; i < numberGays; i++) {
-          $('.outcome').append("<p>" + rainbowIpsum.makeParagraph(5) + "</p>");
+          $('.outcome').append("<p>" + rainbowIpsum.makeParagraph(5) + "</p>").show('normal');
         };
       }
       // or sentences
       else {
         for (var i = 0; i < numberGays; i++) {
-          $('.outcome').append("<p>" + rainbowIpsum.makeSentence(6) + "</p>");
+          $('.outcome').append("<p>" + rainbowIpsum.makeSentence(6) + "</p>").show('normal');
         };
       }
     });
