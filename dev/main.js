@@ -181,7 +181,14 @@
       "cats",
       "cat",
       "kitten",
-      "Blue is the Warmest Color"
+      "Blue is the Warmest Color",
+      "star chart",
+      "zodiac",
+      "you\'re such a Libra",
+      "KStew",
+      "gay agenda",
+      "feminism",
+      "big lesbian crush"
     ],
     this.dirty = [
       "fisting",
@@ -295,10 +302,8 @@
     var today = new Date();
     var year  = today.getFullYear();
     document.getElementById('copyright').innerHTML = "&copy; " + year;
-
-
-    $('#gay-generator').on('click', function(event) {
-      event.preventDefault();
+    
+    var runGenerator = function() {
       var numberGays = $('#numberGays').val();
       var rainbowIpsum = new gayGenerator();
 
@@ -319,8 +324,24 @@
         for (var i = 0; i < numberGays; i++) {
           $('.outcome').append("<p>" + rainbowIpsum.makeSentence(6) + "</p>").show('normal');
         };
+      }     
+    }  
+
+
+    $('input').keypress(function (e) {
+      if (e.which == 13) {
+        e.preventDefault()
+        runGenerator();
       }
+
     });
+
+    $('#gay-generator').on('click', function(e) {
+      e.preventDefault();
+      runGenerator();
+    });
+
+
   });
 })();
 
