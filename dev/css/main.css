@@ -1,10 +1,9 @@
 /* GLOBAL RULES  */
-.row { max-width: 65rem; padding: 30px 0 20px; }
-body { color: #FFF; }
-.small { 
-	font-size: 20px !important;
-	letter-spacing: 0px !important;
-}
+body { color: #000; }
+.row { padding: 0 0 20px; max-width: 65rem; }
+.header { padding: 25px !important; }
+.small { font-size: 20px !important; letter-spacing: 0px !important; }
+
 /* HEADER RULES  */
 .panel {
 	border: none; 
@@ -30,6 +29,7 @@ body { color: #FFF; }
 }
 
 /* MAIN CONTENT RULES  */
+.main { padding: 0; }
 .main h2 { 
 	background-color: #000000; 
 	padding: 10px; 
@@ -37,20 +37,19 @@ body { color: #FFF; }
 	font-size: 25px; 
 	margin: 0;
 	margin-bottom: 15px;
+	display: block !important;
 }
-.button { 
-	border: solid 4px #FFF;
-	background-color: transparent;
+.button {
+	border: none;
+	background-color: #000;
+	font-weight: 700;
 	width: 100%;
 	display: block;
 	margin: 0 auto;
 }
-.button:hover, .button:focus, .button:focus {
-    background-color: #939393; 
-}
-.main .row { padding-top: 0; margin: 0;}
-.main p {display: inline; color: #707070;}
-
+.button:hover, .button:focus, .button:focus { background-color: #939393; }
+.main .row { padding-top: 0; margin: 0; }
+.main p {display: inline; color: #707070; }
 #numberGays, #selectGay {
 	font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 	color: #000;
@@ -59,30 +58,24 @@ body { color: #FFF; }
 }
 
 /* OUTCOME RULES  */
-
 .outcome { 
 	border: solid 2px #FFF; 
 	width: 100%;
 	height: auto;
 	padding: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 0;
 }
+.outcome p { color: #FFF; }
 
 /* FOOTER */
 footer { 
 	text-align: center;
 	margin: 10px 0;
-	color: #707070;
-	
+	color: #707070;	
 }
-
-footer p { 
-	font-size: 11px;
-	margin: 0;
-}
+footer p { font-size: 11px;	margin: 0; }
 
 /* MEDIA QUEERIES */
-
 @media only screen and (min-width: 857px) {
 	.main {
 		text-align: center;
@@ -106,26 +99,3 @@ footer p {
 		margin-bottom: 0;
 	}
 }
-
-
-/* ALTERNATIVE CSS */
-body { color: #000; }
-.row { padding: 0 0 20px; }
-.header { padding: 25px !important; }
-.main { padding: 0; }
-.main h2 { display: block !important; }
-.outcome { margin-bottom: 0; }
-.outcome p { color: white; }
-.button { 
-	border: none;
-	background-color: #000;
-	font-weight: 700; 
-}
-.button:hover, .button:focus, .button:focus {
-    background-color: #939393; 
-}
-
-
-
-
-
