@@ -307,11 +307,11 @@
     var today = new Date();
     var year  = today.getFullYear();
     document.getElementById('copyright').innerHTML = "&copy; " + year;
-    
+    var count = 0;
+ 
     var runGenerator = function() {
       var numberGays = $('#numberGays').val();
       var rainbowIpsum = new gayGenerator();
-
       if ($('#nsfw').is(':checked')) {
         rainbowIpsum.makeItDirty();
       }
@@ -343,6 +343,16 @@
     $('#gay-generator').on('click', function(e) {
       e.preventDefault();
       runGenerator();
+
+      count++;
+      console.log(count);
+      if (count === 5) {
+        $('footer').prepend('<img id="rainbow" src="img/rainbow.png" />');
+        $('#rainbow').animate({left: $(window).width()}, 2000, 'linear', function() {
+          $(this).remove();
+        })
+        count = 0;
+      }
     });
 
 
