@@ -286,22 +286,22 @@
   $(document).on('ready', function() {
 
     // ooo pretty rainbows
-    var randomColors = ['#0080FF','#FF007F','#7A00E5','#FF00FF']
-    var r = Math.floor((Math.random()*randomColors.length));
-    $('.r').css('color', randomColors[r]);
-
-    var randomColors = ['#FF0036','#FFAA00','#dfdf04','#BCE400']
-    var r = Math.floor((Math.random()*randomColors.length));
-    $('.i').css('color', randomColors[r]);
-
-    // ooo pretty rainbows FOR REST OF STUFFS
     var randomColors = ['#FF0036','#FFAA00','#dfdf04','#BCE400','#0080FF','#FF007F','#7A00E5','#FF00FF']
-    var r = Math.floor((Math.random()*randomColors.length));
-    $('.outcome').css('background-color', randomColors[r]);
+    var selectors    = ['.r', '.i', '.outcome', '.heart'];
 
-    var randomColors = ['#FF0036','#FFAA00','#dfdf04','#BCE400','#0080FF','#FF007F','#7A00E5','#FF00FF']
-    var r = Math.floor((Math.random()*randomColors.length));
-    $('.heart').css('color', randomColors[r]);
+    for (var i = 0; i < selectors.length; i++) {
+      var r = Math.floor((Math.random()*randomColors.length));
+      
+      if (selectors[i] === '.outcome') {
+        $(selectors[i]).css('background-color', randomColors[r]);
+      }
+      else {
+        $(selectors[i]).css('color', randomColors[r]);
+      }
+
+      // remove previously selected colors so they're all unique
+      randomColors.splice(r, 1);
+    }
 
     // copyright
     var today = new Date();
@@ -331,7 +331,6 @@
         };
       }     
     }  
-
 
     $('input').keypress(function (e) {
       if (e.which == 13) {
