@@ -345,7 +345,6 @@
       runGenerator();
 
       count++;
-      console.log(count);
       if (count === 5) {
         $('footer').prepend('<img id="rainbow" src="img/rainbow.png" />');
         $('#rainbow').animate({left: $(window).width()}, 2000, 'linear', function() {

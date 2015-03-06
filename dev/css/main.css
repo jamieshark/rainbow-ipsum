@@ -66,6 +66,7 @@ body { color: #000; font-family: Raleway, sans-serif; }
 	height: auto;
 	padding: 15px;
 	margin-bottom: 0;
+	border: none;
 }
 .outcome p { color: #FFF; }
 
