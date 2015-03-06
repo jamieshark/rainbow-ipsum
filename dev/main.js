@@ -286,10 +286,15 @@
   $(document).on('ready', function() {
 
     // ooo pretty rainbows
-    var randomColors = ['#FF0036','#FFAA00','#dfdf04','#BCE400','#0080FF','#FF007F','#7A00E5','#FF00FF']
+    var randomColors = ['#0080FF','#FF007F','#7A00E5','#FF00FF']
     var r = Math.floor((Math.random()*randomColors.length));
-    $('.header').css('background-color', randomColors[r]);
+    $('.r').css('color', randomColors[r]);
 
+    var randomColors = ['#FF0036','#FFAA00','#dfdf04','#BCE400']
+    var r = Math.floor((Math.random()*randomColors.length));
+    $('.i').css('color', randomColors[r]);
+
+    // ooo pretty rainbows FOR REST OF STUFFS
     var randomColors = ['#FF0036','#FFAA00','#dfdf04','#BCE400','#0080FF','#FF007F','#7A00E5','#FF00FF']
     var r = Math.floor((Math.random()*randomColors.length));
     $('.outcome').css('background-color', randomColors[r]);

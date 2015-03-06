@@ -1,21 +1,22 @@
 /* GLOBAL RULES  */
-body { color: #000; }
+body { color: #000; font-family: Raleway, sans-serif; }
 .row { padding: 0 0 20px; max-width: 65rem; }
-.header { padding: 25px !important; }
-.small { font-size: 20px !important; letter-spacing: 0px !important; }
+.header { padding-top: 25px; }
+.small { font-size: 20px !important; letter-spacing: 0px !important; padding-bottom: 0 !important; }
 
 /* HEADER RULES  */
-.panel {
-	border: none; 
+.panel { 
 	background-color: transparent;
 	margin-bottom: 0; 
-	padding: 0;
+	padding: 20px;
+	margin-bottom: 15px;
+	border: 3px dashed #707070;
 }
 .header .panel h1 { 
-	background-color: #000000; 
-	padding: 10px; 
 	margin-bottom: 0;
-	font-size: 35px;
+	display: block !important;
+	font-size: 30px;
+	padding-bottom: 15px;
 }
 .header .panel h1 , .header .panel p, .main h2 { 
 	color: #FFFFFF;  	
@@ -24,8 +25,11 @@ body { color: #000; }
 	letter-spacing: -2px;
 }
 .header .panel p {
-	font-size: 40px;
+	font-size: 25px;
 	margin-bottom: 0;
+	color: #707070;
+	line-height: 30px; 
+	padding-bottom: 15px;
 }
 
 /* MAIN CONTENT RULES  */
@@ -41,7 +45,7 @@ body { color: #000; }
 }
 .button {
 	border: none;
-	background-color: #000;
+	background-color: #707070;
 	font-weight: 700;
 	width: 100%;
 	display: block;
@@ -51,7 +55,6 @@ body { color: #000; }
 .main .row { padding-top: 0; margin: 0; }
 .main p {display: inline; color: #707070; }
 #numberGays, #selectGay {
-	font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 	color: #000;
 	font-size: 14px;
 	background-color: #FFF;
@@ -59,7 +62,6 @@ body { color: #000; }
 
 /* OUTCOME RULES  */
 .outcome { 
-	border: solid 2px #FFF; 
 	width: 100%;
 	height: auto;
 	padding: 15px;
@@ -80,6 +82,10 @@ footer p { font-size: 11px;	margin: 0; }
 	.main {
 		text-align: center;
 	}
+	.header .panel h1 { 
+	font-size: 60px;
+	}
+	.header .panel p { font-size: 40px; }
 	#numberGays { 
 	 	width: 74%;
 		display: inline-block;  	
@@ -91,7 +97,7 @@ footer p { font-size: 11px;	margin: 0; }
 		margin-left: 10px;
 	}
 	.outcome {
-		padding: 30px;
+		padding: 20px;
 		display: none;
 	}
 	.button { 
