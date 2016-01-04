@@ -262,7 +262,7 @@
 
       // Upper case dat trick and add some radical punctuation!?
 
-      string = string[0].toUpperCase() + string.slice(1) + self.punctuation();  
+      string = string[0].toUpperCase() + string.slice(1) + self.punctuation();
 
       return string;
     },
@@ -291,7 +291,7 @@
 
     for (var i = 0; i < selectors.length; i++) {
       var r = Math.floor((Math.random()*randomColors.length));
-      
+
       if (selectors[i] === '.outcome') {
         $(selectors[i]).css('background-color', randomColors[r]);
       }
@@ -308,7 +308,7 @@
     var year  = today.getFullYear();
     document.getElementById('copyright').innerHTML = "&copy; " + year;
     var count = 0;
- 
+
     var runGenerator = function() {
       var numberGays = $('#numberGays').val();
       var rainbowIpsum = new gayGenerator();
@@ -329,8 +329,8 @@
         for (var i = 0; i < numberGays; i++) {
           $('.outcome').append("<p>" + rainbowIpsum.makeSentence(6) + "</p>").show('normal');
         };
-      }     
-    }  
+      }
+    }
 
     $('input').keypress(function (e) {
       if (e.which == 13) {
